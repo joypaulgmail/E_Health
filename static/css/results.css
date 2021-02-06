@@ -1,0 +1,10 @@
+
+table{position:relative;margin-left:350px;}
+td{border:2px solid black;text-align:center;}
+th{background-color:black;color:white;}
+td:hover{background-color:gray;}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+tr{font-size:25px}

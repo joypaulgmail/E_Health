@@ -1,0 +1,17 @@
+#one{background-image:url('register.jpg');  background-repeat: no-repeat;
+  width:100%;height:900px;background-size:cover;}
+#btn{}
+h1{margin-left:630px;padding:20px;}
+#frm{width:600px;height:800px;margin-left:380px;margin-left:450px;background:#DAF3F9;border-radius:15px;}
+td{color:#025366;font-weight:bold;padding:15px;font-size:22px;}
+
+
+.cls{border-radius:10px;background:#A2CFF9;color:#012140;box-shadow: 5px 5px #616A6B;border:none;height:30px;width:
+250px;font-size:20px;}
+.cls:hover{background:#7DF8E1;box-shadow:none;transition:0.5s;}
+textarea{height:80px;width:250px;border-radius:10px;;background:#A2CFF9;box-shadow: 5px 5px #616A6B;border:none;
+font-size:20px;color:#012140;}
+textarea:hover{background:#7DF8E1;box-shadow:none;transition:0.5s;}
+#btn{margin-left:390px;margin-top:32px;font-size:15px;color:white;width:120px;height:40px;background:#3674AF;
+border-radius:10px;}
+#btn:hover{background:#11363E;color:BBEEF9;transition:0.5s;}

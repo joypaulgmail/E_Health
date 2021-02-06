@@ -1,0 +1,24 @@
+#one{background-image:url("download.jfif");background-repeat:no-repeat;background-size:cover;height:570px;}
+.head{color:white;font-size:25px;padding:10px;font-weight:bold;}
+td{color:white;text-align:center;font-size:20px;}
+#heading{border:2px solid red;background-color:#B4B4B4;}
+#data td:hover{background:#DFDFDC;transition:0.5s;}
+#data:nth-child(odd) {
+  background: white;
+}
+#data td{color:black;width:60px;height:60px;font-size:20px;}
+
+#data:nth-child(even) {
+  background:white;
+}
+#data .name{width:180px;color:white;background:#646464;}
+#data .name:hover{background:white;color:black;}
+.btn{background:#1588B6;width:120px;height:50px;border-radius:16px;font-size:20px;color:#1588B6;}
+.btn:hover{background:#0CA3DF;color:#0CA3DF;transition:0.5s;}
+.inp{width:280px;height:40px;font-size:25px;margin-left:130px;padding:10px;}
+.txt{color:red;font-size:30px;margin-left:130px;font-size:25px;text-align:center;}
+#tbl{margin-left:200px;}
+::placeholder {
+  color: #9B9E9E;
+  font-family: "Times New Roman", Times, serif;
+   }

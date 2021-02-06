@@ -1,0 +1,54 @@
+{% extends 'search.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<link rel="stylesheet" href="{% static 'css/add_hospitals.css' %}">
+<body>
+<div one="">
+<form action="/add_hospital/" method="POST" >
+    {% csrf_token %}
+    <a style="color:black;" href="/addmovie/">HOSPITAL DETAILS</a>
+    <table>
+        <tr>
+            <td>NAME</td>
+            <td> <input type="text" name="cname" placeholder="NAME"></td>
+        </tr>
+        <tr>
+            <td>CITY</td>
+            <td> <input type="text" name="ccity" placeholder="CITY"></td>
+        </tr>
+         <tr>
+            <td>TREATMENT</td>
+            <td><input type="text" name="ctreat" placeholder="TREATMENT"> </td>
+        </tr>
+         <tr>
+            <td>BED</td>
+            <td> <input type="text" name="cbed" placeholder="BED"> </td>
+        </tr>
+         <tr>
+            <td>BLOOD</td>
+            <td> <input type="text" name="cblood" placeholder="BLOOD"> </td>
+        </tr>
+        <tr>
+            <td>PATIENT</td>
+            <td>   <input type="text" name="cpatient" placeholder="PATIENT"> </td>
+        </tr>
+
+
+    </table>
+
+    <button type="submit" class="btn btn-primary btn-lg">submit</button>
+
+</form>
+
+
+</body>
+</html>
+{% endblock %}

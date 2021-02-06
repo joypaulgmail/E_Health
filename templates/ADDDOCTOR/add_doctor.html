@@ -1,0 +1,61 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adddoctor</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+<link rel="stylesheet" href="{% static 'ADDDOCTOR/add_doctors.css' %}">
+<body>
+<h1 style="color:red;margin-top:40px;margin-left:560px;font-size:40px;position:reletive;"><i class='fas fa-h-square' style='font-size:45px'></i>OSPITAL<i class='fas fa-heartbeat' style='font-size:36px'></i>SEVA </h1>
+<form action="" method="post">
+    {% csrf_token %}
+
+        <div id="one">
+            <table>
+        <tr>
+            <td>NAME:</td>
+             <td><input type="text"></td>
+        </tr>
+         <tr>
+            <td>QUALIFICATION:</td>
+             <td><input type="text"></td>
+        </tr>
+         <tr>
+            <td>SPECIALITY:</td>
+             <td><input type="text"></td>
+        </tr>
+         <tr>
+            <td>HOSPITAL:</td>
+             <td><input type="text"></td>
+        </tr>
+         <tr>
+            <td>EXPERIENCE:</td>
+             <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>VISITING DAYS:</td>
+             <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>FEES:</td>
+             <td><input type="text"></td>
+        </tr>
+
+         <tr>
+            <td>PHOTO:</td>
+             <td><input type="file" style="background-color:#054EF8;" ></td>
+        </tr>
+                     </table>
+              <button id="btn" style="margin-left:400px;mergin-bottom:10px;width:140px;height:38px;border-radius:10px;border:none;" type="submit" class="btn btn-primary active">
+                  REGISTER</button>
+
+        </div>
+</form>
+
+</body>
+</html>

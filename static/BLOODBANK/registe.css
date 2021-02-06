@@ -1,0 +1,31 @@
+#one{background-image:url('register.jpg');  background-repeat: no-repeat;
+  width:100%;height:950px;background-size:cover;}
+#btn{}
+h1{margin-left:640px;padding:10px;}
+#frm{width:600px;height:800px;margin-left:500px;border-radius:15px;}
+
+tr{color:#000825;font-size:20px;padding-top:40px;padding-left:30px;margin-top:30px;}
+.cls{height:40px;width:500px;border-radius:10px;border:none; box-shadow: 2px 2px 2px 2px #02209C;
+padding:10px;font-size:20px;margin-top:1px;}
+td{padding-top:10px;padding-left:20px;}
+
+.cls:hover{box-shadow:1px 1px 1px 1px white;transition:0.5s;}
+
+::placeholder {
+  color: #9B9E9E;
+  font-family: "Times New Roman", Times, serif;
+   
+ 
+}
+
+textarea{height:100px;width:500px;font-size:15px;border:none; box-shadow: 2px 2px 2px 2px #02209C;padding:10px;
+font-size:20px;border-radius:10px;
+
+}
+textarea:hover{box-shadow:1px 1px 1px 1px white;transition:0.5s;}
+
+
+
+#btn{margin-left:90px;margin-top:60px;font-size:15px;color:white;width:400px;height:40px;background:#3674AF;
+border-radius:10px;border:none;}
+#btn:hover{background:#0982F0;color:BBEEF9;transition:0.5s;border:white;}

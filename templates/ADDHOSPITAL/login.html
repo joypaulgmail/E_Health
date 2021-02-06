@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+      <link rel="stylesheet" href="{% static 'ADDHOSPITAL/login.css' %}">
+</head>
+<body>
+   <h1 style="color:red;margin-top:5px;margin-left:580px;font-size:40px;position:reletive;"><i class='fas fa-h-square' style='font-size:45px'>
+
+    </i>OSPITAL<i class='fas fa-heartbeat' style='font-size:36px'></i><i class="fa fa-strikethrough" style="font-size:36px;"></i>EVA </h1>
+<form id="one" action="/hospital/bloodsubmit/" method="post">
+{% csrf_token %}
+    <table  style="position:absolute;" id="frm">
+
+           <tr>
+                <td id="nam">REGISTRATION NUMBER</td>
+            </tr>
+        <tr>
+            <td style="padding-top:10px;"><input placeholder="Registration Number.." type="text" name="register" class="inp"></td>
+        </tr>
+
+
+        <tr >
+         <td class="bg">BLOOD GROUP</td>
+             <td class="bg">A+</td><td class="bg">B+</td><td class="bg">O+</td><td class="bg">AB+</td>
+        <tr>
+         <tr>
+         <td class="bg">AVAILABLE</td>
+             <td><input type="text" name="A+" class="cls"></td><td><input type="text" name="B+" class="cls"></td><td><input type="text" name="O+" class="cls"></td><td><input type="text" name="AB+" class="cls"></td>
+        <tr>
+          <tr>
+         <td class="bg">BLOOD GROUP</td>
+          <td class="bg">A-</td><td class="bg">B-</td><td class="bg">O-</td><td class="bg">AB-</td>
+        <tr>
+         <tr>
+         <td class="bg">AVAILABLE</td>
+        <td><input type="text" name="A-"  class="cls"></td><td><input type="text" name="B-"  class="cls"></td><td><input type="text" name="O-"  class="cls"></td><td><input type="text" name="AB-"  class="cls"></td>
+
+        <tr>
+
+
+    </table>
+
+
+    <table id="tbl2" style="position:absolute;margin-left:600px;">
+              <tr>
+                <td  id="nam">PASSWORD</td>
+            </tr>
+        <tr>
+            <td style="padding-top:10px;"><input type="text" placeholder="Password" name="password" class="inp"></td>
+        </tr>
+
+    </table>
+    <input type="submit"  id="btn" value="SUBMIT">
+</form>
+</body>
+</html>

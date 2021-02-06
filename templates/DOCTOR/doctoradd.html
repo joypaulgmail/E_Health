@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adddoctor</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+<link rel="stylesheet" href="{% static 'FINDDOCTOR/add_doctor.css' %}">
+<body>
+<h1 style="color:red;margin-top:40px;margin-left:560px;font-size:40px;position:reletive;"><i class='fas fa-h-square' style='font-size:45px'></i>OSPITAL<i class='fas fa-heartbeat' style='font-size:36px'></i>SEVA </h1>
+<div id="one">
+
+        <form  action="/doctor/doctordetail/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+        <table id="frm">
+            <tr>
+                <td>NAME</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Name.." name="name"></td>
+            </tr>
+            <tr>
+                <td>REGISTRATION NUMBER</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Registration Number.." name="registration"></td>
+            </tr>
+
+             <tr>
+                <td>QUALIFICATION</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Qualificaton.." name="qualification"></td>
+            </tr>
+             <tr>
+                <td>SPECIALITY</td>
+             </tr>
+            <tr>
+
+                <td><input class="cls" type="text" placeholder="Speciality.." name="speciality"></td>
+            </tr>
+             <tr>
+                 <td>CONTACT NUMBER</td>
+             </tr>
+             <tr>
+                <td><input class="cls" type="number" placeholder="Contact Number.." name="contact"></td>
+            </tr>
+              <tr>
+                 <td>STATE</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="State.." name="state" ></td>
+            </tr>
+        </table>
+        <table  id="two">
+             <tr>
+                 <td>CITY</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="City.." name="city"></td>
+            </tr>
+            <tr>
+                <td>CLINIC</td>
+             </tr>
+            <tr>
+                 <td><textarea placeholder="Clinic" name="clinic"></textarea></td>
+            </tr>
+              <tr>
+                 <td>EXPERIENCE</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Experience.." name="experience"></td>
+            </tr>
+             <tr>
+                 <td>FEES</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="number" placeholder="Fees.." name="fees"></td>
+            </tr>
+             <tr>
+                 <td>PHOTO</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="file" placeholder="City.." name="photo"></td>
+            </tr>
+        </table>
+            <input id="btn" type="submit" value="REGISTER">
+        </form>
+
+    </div>
+
+
+
+</body>
+</html>

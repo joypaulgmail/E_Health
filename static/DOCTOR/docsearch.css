@@ -1,0 +1,67 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body {
+    height: 100%;
+	margin:0;
+	padding:0;
+}
+
+
+form.example button {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+#pattient{
+position:relative;
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration:inherit;width:300px;font-size:20px;}
+
+.one{
+  padding:10px;
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.container .one{height:20px;width:250px;}
+.one:hover{transition:0.5s;}
+ul li {list-style-type: none;}
+.one{font-size:25px;}
+#tbl{position:relative;margin-right:200px;margin-top:50px;
+background:#A5EFF0;width:900px;color:black;font-size:18px;border-radius:50px;height:400px;}
+
+.circular{
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+   overflow: hidden;
+}
+.once{width:300px;height:30px;background:white;margin-left:50px;}
+img{padding:10px;}
+#btns{border-radius:20px;margin-left:650px;}
+#btns:hover{background:pink;}
+td{padding:10px;}
+.tr{padding-left:30px;margin-left:30px;}
+
+
+
+
+

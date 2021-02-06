@@ -1,0 +1,86 @@
+{% extends 'search.html' %}
+{% block content%}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blood Donate</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <link rel="stylesheet" href="{% static 'BLOODBANK/register.css' %} " type="text/css" >
+
+</head>
+<body>
+<div id="one">
+<h1>BLOOD BANK</h1>
+
+        <form id="frm" action="/bloodbank/bloodrequiredsubmit/" method="post">
+            {% csrf_token %}
+        <table>
+            <tr>
+                <td>NAME</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Name.." name="name"></td>
+            </tr>
+            <tr>
+                <td>AGE</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Age.." name="age"></td>
+            </tr>
+
+             <tr>
+                <td>BLOOD GROUP</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="Blood Group.." name="blood"></td>
+            </tr>
+             <tr>
+                <td>MEDICAL HISTORY</td>
+             </tr>
+            <tr>
+
+                <td><input class="cls" type="text" placeholder="Medical History.." name="medical"></td>
+            </tr>
+             <tr>
+                 <td>CONTACT NUMBER</td>
+             </tr>
+             <tr>
+                <td><input class="cls" type="text" placeholder="Contact Number.." name="number"></td>
+            </tr>
+              <tr>
+                 <td>STATE</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="State.." name="state"></td>
+            </tr>
+
+             <tr>
+                 <td>CITY</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text" placeholder="City.." name="city"></td>
+            </tr>
+
+
+             <tr>
+                <td>ADDRESS</td>
+             </tr>
+            <tr>
+                 <td><textarea placeholder="Address" name="address"></textarea></td>
+            </tr>
+
+        </table>
+            <input id="btn" type="submit" value="REGISTER">
+        </form>
+
+    </div>
+
+</body>
+</html>
+{% endblock %}

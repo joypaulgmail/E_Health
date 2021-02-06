@@ -1,0 +1,87 @@
+{% extends 'search.html' %}
+{% block content%}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blood Donate</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="{% static 'BLOODBANK/blood_donate.css' %} " type="text/css" >
+</head>
+<style>
+    @keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s slidy infinite;
+}
+
+
+
+</style>
+
+<body>
+<div id="slider">
+<figure>
+<img src="{% static 'BLOODBANK/blooddonation.jpg' %}" alt>
+<img src="{% static 'BLOODBANK/blood3.jpg' %}" alt>
+<img src="{% static 'BLOODBANK/blood4.jpg' %}" alt>
+<img src="{% static 'BLOODBANK/blood5.jpg' %}" alt>
+<img src="{% static 'BLOODBANK/blooddonater.jpg' %}" alt>
+</figure>
+</div>
+<ul id="one">
+    <li><img class="img" style="width:300px;height:550px;"  src="{% static 'BLOODBANK/b1.jpg' %}"></li>
+
+    <li>  <form  id="frm"  action="/bloodbank/blooddonatesubmit/" method="post">
+
+            {% csrf_token %}
+
+        <table>
+            <tr><td class="cls">NAME</td><td class="cls">AGE</td></tr>
+            <tr><td><input type="text" placeholder="Sumit Sarker" class="imp" name="name"></td>
+                <td><input type="text" placeholder="28" class="imp" name="age"></td></tr>
+            <tr><td class="cls">STATE</td><td class="cls">CITY</td><td></td>
+            <tr><td><input type="text" placeholder="Rajasthan"class="imp" name="state"></td>
+            <td><input type="text" placeholder="Jaipur" class="imp" name="city"></td></tr>
+            <tr> <td class="cls">CONTACT</td> <td class="cls">BLOOD GROUP</td></tr>
+            <tr><td><input type="text" placeholder="75489645.." class="imp" name="number"></td>
+                <td><input type="text" placeholder="O+" class="imp" name="blood"></td></tr>
+            <tr ><td class="cls">ADDRESS</td><td class="cls">MEDICAL HISTORY</td></tr>
+            <tr><td><textarea  class="imp" placeholder="Paryatan Bhawan, Patewala Campus,M.I.Road., Jaipur" id="second" name="address"></textarea></td>
+                <td><textarea  class="imp" placeholder="Asthoma,Dengue" id="first" name="medical"></textarea></td></tr>
+
+
+        </table>
+            <input id="btn" type="submit" value="DONATE">
+        </form>
+        </li>
+     <li><img class="img" style="width:300px;height:550px;margin-left:130px;"  src="{% static 'BLOODBANK/b2.jpg' %}"></li>
+</ul>
+</div>
+</body>
+</html>
+{% endblock %}

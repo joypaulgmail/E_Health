@@ -1,0 +1,44 @@
+{% extends 'search.html' %}
+{% block content%}
+{% load static %}
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+</head>
+<body>
+<h1 style="color:red;text-size:20px;float:right;align:center;">{{time}}</h1>
+<a style="color:black;font-size:30px;text-decoration:none;" href="/add_hospital/">add hospital</a>
+<a href="/search/">SEARCH</a>
+
+<h1 style="text-align:center;">HOSPITAL DETAILS </h1>
+
+<table>
+    <tr>
+        <th><h1>HOSPITAL NAME</h1></th>
+        <th><h1>CITY</h1></th>
+        <th><h1>TREATMENT</h1></th>
+        <th><h1>BLOOD</h1></th>
+        <th><h1>BED</h1></th>
+        <th><h1>PATIENT</h1></th>
+
+    </tr>
+  {% for hos in movies %}
+    <tr>
+        <td>{{hos.hname}}</td>
+        <td>{{hos.hcity}}</td>
+        <td>{{hos.htreat}}</td>
+          <td>{{hos.hblood}}</td>
+          <td>{{hos.hbed}}</td>
+        <td>{{hos.hpatient}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/sear.css' %} " type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>     <!--slide-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-><!--slide-->
+</head>
+<style>
+    @keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+
+}
+
+img{height:500px;}
+
+</style>
+
+<body>
+<div class="container">
+
+
+    <h1 style="color:red;margin-top:5px;margin-left:300px;font-size:36px;position:reletive;">E-<i class='fas fa-h-square' style='font-size:36px'>
+
+    </i>OSPITAL BED <i class='fas fa-heartbeat' style='font-size:36px'> BLOOD BOOKING </i> <i class="fa fa-strikethrough" style="font-size:36px;"> </i>ERVICE </h1>
+    <form method="POST" action="/finddoctor/searchdoctor/"  class="example"  id="theFormID" style="margin:auto;max-width:500px">
+       {% csrf_token %}
+    <input  type="text" placeholder="CITY OR HOSPITAL FOR BOOKING BED" name="city">
+    <button type="submit"><i class="fa fa-search"></i>search</button>
+
+</form>
+
+
+</div>
+<br>
+<marquee style="color:red;" behavior="scroll" direction="right" scrollamount="5">WE ARE HERE TO HELP YOU</marquee>
+<div class="topnav">
+      <ul >
+  <li><a class="active" href="/search/">Home</a></li>
+          <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Choose Services<i class='far fa-handshake' style='font-size:24px'></i></a>
+    <div class="dropdown-content">
+      <a href="/bloodbank/blooddonate/">Blood Donate</a>
+      <a href="/doctor/doctoradd/">Add Doctor</a>
+      <a href="/hospital/addhospital/">Add Hospital</a>
+    </div>
+
+  </li>
+          <li><a href="/addmovie/">Search hospital<i class="fa fa-user-md" style="font-size:24px"></i> </a></li>
+
+           <li><a href="/bloodbank/">Blood Bank<i class="fas fa-tint" style='font-size:24px'></i></a></li>
+          <li><a href="/ambulence/sendrequest/">Ambulence<i class="fas fa-ambulance" style='font-size:24px'></i></a></li>
+          <li><a href="/healthlibrary/">Health Library<i class="fa fa-medkit" style='font-size:24px'></i></a></li>
+          <li><a href="/finddoctor/bedbook/">Ask Us<i class="fas fa-question-circle" style='font-size:24px'></i></a></li>
+             <li><a href="/doctor/doctorsearch/">Find Doctor<i class="fa fa-user-md" style="font-size:24px"></i> </a></li>
+</ul>
+</div>
+
+{% block content %}
+<div id="slider">
+<figure>
+<img src="{% static 'css/slide1.jpg' %}" alt>
+<img src="{% static 'css/bed.jpeg' %}" alt>
+<img src="{% static 'css/ambulance.jpg' %}" alt>
+<img src="{% static 'css/slide4.jfif' %}" alt>
+<img src="{% static 'css/bl.jpg' %}" alt>
+</figure>
+</div>
+
+
+    <!-- Wrapper for slides -->
+
+
+
+
+
+    {% endblock %}
+
+    <div class="navbar">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+    </div>
+
+</body>
+</html>

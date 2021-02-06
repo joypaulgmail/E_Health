@@ -1,0 +1,90 @@
+{% extends 'search.html' %}
+{% block content %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>addhospital</title>
+    <link rel="stylesheet" href="{% static 'ADDHOSPITAL/addhospital.css' %}">
+</head>
+<body>
+<h1 style="margin-left:650px;color:red;">ADDHOSPITAL</h1>
+<div id="one">
+
+        <form  action="/hospital/hospitalsubmit/" method="post">
+            {% csrf_token %}
+
+        <table id="frm">
+            <tr>
+                <td>NAME</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" name="name" placeholder="Name.."></td>
+            </tr>
+            <tr>
+                <td>REGISTRATION NUMBER</td>
+            </tr>
+            <tr>
+                <td><input class="cls" type="text" name="registration" placeholder="Registration Number.."></td>
+            </tr>
+            <tr>
+                <td>TREATMENT</td>
+             </tr>
+            <tr>
+
+                <td><input class="cls" type="text"  name="treatment"  placeholder="Treatment.."></td>
+            </tr>
+            <tr>
+                 <td>BED</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text"  name="bed"  placeholder="Experience.."></td>
+            </tr>
+             <tr>
+                 <td>PASSWORD</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text"  name="password"  placeholder="Password.."></td>
+            </tr>
+
+        </table>
+        <table  id="two">
+               <tr>
+                 <td>STATE</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text"  name="state"  placeholder="State.."></td>
+            </tr>
+             <tr>
+                 <td>CITY</td>
+             </tr>
+            <tr>
+                <td><input class="cls" type="text"  name="city" placeholder="City.."></td>
+            </tr>
+                <tr>
+                 <td>CONTACT NUMBER</td>
+             </tr>
+             <tr>
+                <td><input class="cls" type="text"  name="contact"  placeholder="Contact Number.."></td>
+            </tr>
+            <tr>
+                <td>ADDRESS</td>
+             </tr>
+            <tr>
+                 <td><textarea placeholder="Address"  name="address" ></textarea></td>
+            </tr>
+
+        </table>
+            <input id="btn" type="submit" value="REGISTER">
+        </form>
+
+
+</div>
+
+</body>
+</html>
+{% endblock %}

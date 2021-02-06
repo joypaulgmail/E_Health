@@ -1,0 +1,17 @@
+body {
+ background-image:url('five.png');
+}
+
+
+#one{background-color:#054EF8;width:600px;height:520px;position:relative;margin-top:60px;margin-left:460px;
+opacity:0.7; border-radius: 50px 5px;}
+table{padding:30px;}
+td{color:white;font-weight:bold;
+	}
+	
+tr{position:relative;margin-top:30px;}
+input:hover{background-color:#CEC5E8;border-radius:10px;border:none;transition:0.5s;}
+
+input{font-size:20px;background-color:#6FEACD;color:black;height:30px;width:350px;font-weight:bold;padding:7px;}
+
+#btn:hover{background-color: #0436E9;transition:0.7s;color:white;}

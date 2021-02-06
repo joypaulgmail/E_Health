@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'DOCTOR/docsearche.css' %} " type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<br>
+<div class="container">
+    <h1 style="color:red;margin-top:5px;margin-left:300px;font-size:36px;position:reletive;">E-<i class='fas fa-h-square' style='font-size:36px'>
+
+    </i>OSPITAL BED <i class='fas fa-heartbeat' style='font-size:36px'> BLOOD BOOKING </i> <i class="fa fa-strikethrough" style="font-size:36px;"> </i>ERVICE </h1>
+
+
+    <form method="POST" action="/doctor/doctorsearchsubmit/"  class="example"  id="theFormID" style="margin:auto;max-width:500px">
+       {% csrf_token %}
+        <table>
+            <br>
+            <tr><td><input type="text"  class="one" placeholder='&#xf041; Location'  name="location"></td>
+                <td><input  type="text" class="one" placeholder='&#xf0f0; Speciality'  name="speciality"></td></tr>
+            </table>
+
+    <button id="btn" style="margin-top:50px;margin-left:206px;" type="submit"><i class="fa fa-search"></i>search</button>
+
+</form>
+    </br>
+    </br>
+    {% if data %}
+    <table>
+        <tr>
+            {% for i in data %}
+            <td>{{data.address}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% endif %}
+
+
+</div>
+<form action="/doctor/doctorapoint/" method="post">
+    {% csrf_token %}
+
+    {% for x in details %}
+    <table id="tbl">
+
+        <tr ><td><img class="circular" style="width:120px;height:90px;" src="{{x.photo.url}}" alt="media"></td>
+            <td style="color:#0041A1;margin-left:350px;font-size:25px;font-weight:bold;">Dr. {{x.name}}</td>
+        <tr>
+        <tr id="inside">
+          <tr class="tr"><td><i class="fas fa-graduation-cap"></i>{{x.qualification}}</td>
+        <td id="nm">    <input style="height:30px;padding:7px;" id="pattient" type="text" name="name"   placeholder='&#xf007; Patient Name'  ></td></tr>
+            <tr class="tr"><td><i class="fa fa-phone" aria-hidden="true"></i> {{x.contact}}</td></tr>
+         <tr class="tr"><td><i class="fa fa-map-marker" aria-hidden="true"></i> {{x.address}}</td></tr>
+            <tr class="tr"> <td>{{x.experience}}yrs</td></tr>
+
+            <tr class="tr"><td><i class="fa fa-inr" aria-hidden="true"></i> {{x.fees}}</td>
+                <td><button type="submit" style="margin-left:200px;" class="bt" name="regis" value="{{x.registration}}">REQUEST</button></td></tr>
+    </tr>
+
+
+</table>
+    {% endfor %}
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% extends 'search.html' %}
+{% block content%}
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor finding</title>
+
+      <link rel="stylesheet" href="{% static 'FINDDOCTOR/searchdocto.css' %} " type="text/css" >
+
+
+
+</head>
+<body>
+<div id="one">
+    <br>
+
+    <form action="/finddoctor/bedbook/" method="post">
+        {% csrf_token %}
+           <table id="tbl">
+            <tr><td   class="txt" >Name</td><td class="txt">Blood Group</td></tr>
+            <tr><td style="padding-left:80px;"><input type="text"  class="inp" name="name" placeholder="Ranjan Das"></td><td><input type="text" name="blood" class="inp" placeholder="A+" >
+            </td></tr>
+        </table>
+        <br>
+        <br>
+    <table >
+           <tr id="heading" >
+                        <td class="head" >HOSPITAL </td>
+
+                         <td class="head">CONTACT NUMBER</td>
+                        <td class="head">AVAILABLE BED</td>
+                        <td class="head">TREATMENTS</td>
+                        <td class="head">A+ </td>
+                        <td class="head">B+</td>
+                         <td class="head">O+</td>
+                        <td class="head">AB+</td>
+                       <td class="head">A- </td>
+                        <td class="head">B-</td>
+                         <td class="head">O-</td>
+                        <td class="head">AB-</td>
+                        <td class="head">BED BOOK</td>
+
+
+
+
+
+                    </tr>
+         {% for t in name %}
+                    <tr id="data" >
+                        <td  class="name">{{t.hname}}</td>
+                        <td>{{t.hcontact}}</td>
+                         <td>{{t.hbed}}</td>
+                        <td>{{t.htreatment}}</td>
+                        <td>{{t.hapos}}</td>
+                        <td>{{t.hbpos}}</td>
+                        <td>{{t.hopos}}</td>
+                         <td>{{t.habpos}}</td>
+                        <td>{{t.haneg}}</td>
+                         <td>{{t.hbneg}}</td>
+                        <td>{{t.honeg}}</td>
+                        <td>{{t.habneg}}</td>
+                        <td><input type="submit" class="btn" name="id" value="{{t.hname}}" >book</td>
+                    </tr>
+
+
+            {% endfor %}
+        </table>
+
+    </form>
+</div>
+
+
+
+</body>
+</html>
+{% endblock %}
